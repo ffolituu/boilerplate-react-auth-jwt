@@ -26,9 +26,9 @@ Notre boilerplate d'authentification JWT est une application pré-construite qui
 ### Installation
 
 ````
- git clone https://github.com/ffolituu/react-auth-jwt.git 
+ git clone https://github.com/ffolituu/boilerplate-react-auth-jwt.git 
 
- cd react-auth-jwt
+ cd boilerplate-react-auth-jwt
 
  yarn istall
  ````
@@ -50,5 +50,5 @@ yarn dev
 ## Todo
 
 - [ ] RefreshToken
-- [ ] Remplacer la fonction native `localStorage` par les fonctions du pcakage `zustand`
-- [ ] Etablir des middlewares frontaux par rôles
+- [ ] Remplacer la fonction native `localStorage` par les fonctions du package `zustand`
+- [ ] Etablir des middlewares frontaux par rôles utilisateurs
