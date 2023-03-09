@@ -3,31 +3,43 @@
     {
       "email": "jonh.doe@mail.com",
       "password": "$2a$10$76DsNb6N1k0fsrpdl7SnOeTag0AyEGKU7uSrHwq7CGwCJtpl7c156",
+      "role":"MEMBER",
       "id": 2
     },
     {
       "email": "dominique.doe@mail.com",
       "password": "$2a$10$osWzJIRq4kqSTvAOxjZOA.lxtyuOQ89Oy68bZ0sFfB5PW2rSbGqjO",
+      "role":"MEMBER",
       "id": 3
     },
     {
       "email": "joshuaT@mail.com",
       "password": "$2a$10$oqD/TiNTk..08wp/JHcm2ualy9xjYIE1/IT2w45ZUSSS4G7xWk4S.",
+      "role":"MEMBER",
       "id": 5
+    },
+    {
+      "email": "nakyqo@mailinator.com",
+      "password": "$2a$10$zpCCt0aotiXpHmWJGWndPufVbjgLY/EPkbulEn2JY2NAAsvVThg8C",
+      "role":"MEMBER",
+      "id": 7
     }
   ],
   "todos": [
     {
       "id": 1,
-      "name": "Ma première tâche"
+      "name": "Ma première tâche",
+      "userId": 8
     },
     {
       "id": 2,
-      "name": "Ma deuxième tâche"
+      "name": "Ma deuxième tâche",
+      "userId": 7
     },
     {
       "id": 3,
-      "name": "Ma troisième tâche"
+      "name": "Ma troisième tâche",
+      "userId": 7
     }
   ]
 }

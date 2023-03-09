@@ -3,13 +3,14 @@ import { Form, Button, Row, Col, Alert } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import AuthService from "../../services/Auth/AuthService";
 import { Link, Navigate } from "react-router-dom";
+import { getError } from "../../utils/errors/AxiosError";
 
 export const LoginComponent: React.FC<any> = () => {
   /* Hooks
    *************************************************************/
   const [redirect, setRedirect] = React.useState<boolean>(false);
   const [isError, setIsError] = React.useState<boolean>(false);
-  const [msgFlash, setMsgFlash] = React.useState<string>("");
+  const [msgFlash, setMsgFlash] = React.useState<any>("");
 
   const { register, handleSubmit } = useForm();
 
@@ -22,7 +23,7 @@ export const LoginComponent: React.FC<any> = () => {
       })
       .catch((error: any) => {
         setIsError(true);
-        setMsgFlash(error.response.data);
+        setMsgFlash(getError(error));
       });
   };
 
@@ -42,15 +43,7 @@ export const LoginComponent: React.FC<any> = () => {
             {isError && (
               <Alert variant="danger">
                 <small>
-                  Oups ! Une erreur est survenue, voici ce que retourne le
-                  backend <br />
-                  <b>"{msgFlash}"</b>
-                  {msgFlash === "Cannot find user" && (
-                    <p className="mt-3">
-                      Cela signifie que vous n'êtes pas encore inscrit à
-                      l'application
-                    </p>
-                  )}
+                  <b>{msgFlash}</b>
                 </small>
               </Alert>
             )}
