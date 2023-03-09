@@ -30,7 +30,7 @@ Notre boilerplate d'authentification JWT est une application pré-construite qui
 
  cd boilerplate-react-auth-jwt
 
- yarn istall
+ yarn install
  ````
 
 ### Lancer le front-end
