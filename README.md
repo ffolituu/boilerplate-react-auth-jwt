@@ -1,9 +1,8 @@
 # Boilerplate - React Auth JWT
 
-L'application fournit une base solide pour l'authentification dans le développement de vos projets, ce qui vous permet d'économiser du temps et d'éviter de réinventer la roue.
+Vous êtes un développeur qui souhaite gagner du temps et éviter la répétition ennuyeuse de la mise en place d'un système d'authentification sécurisé pour chaque nouveau projet ? Nous avons une solution pour vous !
 
-Cette application intègre un système d'authentification qui permet à l'utilisateur de se connecter et d'accéder au tableau de bord une fois authentifié.
-L'application utilise `JSON Web Token` pour mettre en place un système de middleware frontal qui sépare les routes pour les utilisateurs authentifiés et non authentifiés.
+Notre boilerplate d'authentification JWT est une application pré-construite qui implémente déjà la sécurité de l'authentification basée sur JSON Web Tokens. Les développeurs peuvent télécharger et utiliser cette application comme point de départ pour leur propre projet, sans avoir à se soucier de la mise en place de l'authentification de base.
 
 ## Dependences pour le front
 
@@ -22,19 +21,31 @@ L'application utilise `JSON Web Token` pour mettre en place un système de middl
 - json-server : 0.17.2
 - json-server-auth : 2.1.0
 
-## Installation
+## Cas d'usage
 
-```` git clone https://github.com/ffolituu/react-auth-jwt.git ````
+### Installation
 
-```` cd react-auth-jwt ````
+````
+ git clone https://github.com/ffolituu/react-auth-jwt.git 
 
-```` yarn install ````
+ cd react-auth-jwt
 
-Lancer le front-end :
-```` yarn dev ````
+ yarn istall
+ ````
 
-Lancer le back-end :
-```` yarn backend ````
+### Lancer le front-end
+
+````
+yarn dev
+````
+
+### Lancer le back-end
+
+````
+ yarn backend 
+````
+
+> N'hésitez pas à contribuer au projet si cela vous intéresse
 
 ## Todo
 

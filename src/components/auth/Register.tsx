@@ -5,47 +5,39 @@ import { Link } from "react-router-dom";
 import AuthService from "../../services/Auth/AuthService";
 
 export const RegisterComponent: React.FC<any> = () => {
-  /* States
+  /* Hooks
    *************************************************************/
-  const [isSave, setIsSave] = React.useState<boolean>(false);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const [isSuccess, setIsSuccess] = React.useState<boolean>(false);
+  const { register, handleSubmit } = useForm();
 
-  /* useEffect
-   *******************************************************************************************/
-  React.useEffect(() => {}, []);
-
-  /* Function / Events
-   *******************************************************************************************/
+  /* Functions / Events
+   *************************************************************/
   const onSubmit = (data: any) => {
-    // Validation Control by field
-
-    // API LOGIN
-    login(data.email, data.password);
-  };
-
-  const login = (email: string, password: string) => {
-    try {
-      AuthService.register(email, password).then((response: any) => {
-        setIsSave(true);
+    AuthService.register(data.email, data.password)
+      .then(() => {
+        setIsSuccess(true);
+      })
+      .catch((error: any) => {
+        console.log(error);
       });
-    } catch (error: any) {
-      console.log(error);
-    }
   };
 
   /* Render
-   *******************************************************************************************/
+   *************************************************************/
   return (
     <>
-      {isSave ? (
-        <Alert variant={"success"}>
-          Vous êtes bien enregistré ! <br />
-          <Link to="/connexion">Se connecter</Link>
-        </Alert>
+      {isSuccess ? (
+        <Row>
+          <Col className="col-6 offset-3">
+            <Alert variant={"success"}>
+              Vous êtes bien enregistré ! <br />
+              Veuillez désormais vous connecter en cliquant sur le lien
+              ci-dessous
+              <br />
+              <Link to="/connexion">Se connecter</Link>
+            </Alert>
+          </Col>
+        </Row>
       ) : (
         <Row>
           <Col className="col-6 offset-3">
