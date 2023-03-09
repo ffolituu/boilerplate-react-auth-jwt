@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "email": "jonh.doe@mail.pf",
+      "password": "$2a$10$76DsNb6N1k0fsrpdl7SnOeTag0AyEGKU7uSrHwq7CGwCJtpl7c156",
+      "id": 2
+    },
+    {
+      "email": "zomofof@mailinator.com",
+      "password": "$2a$10$osWzJIRq4kqSTvAOxjZOA.lxtyuOQ89Oy68bZ0sFfB5PW2rSbGqjO",
+      "id": 3
+    },
+    {
+      "email": "fabrice.folituu@lwane.com",
+      "password": "$2a$10$8cKzQrL7oUYEy2484zmzGeJliCmp7ej4sLEqD75kRcbuZTqNq4DIG",
+      "id": 4
+    }
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "name": "Ma première tâche"
+    },
+    {
+      "id": 2,
+      "name": "Ma deuxième tâche"
+    },
+    {
+      "id": 3,
+      "name": "Ma troisième tâche"
+    }
+  ]
+}
