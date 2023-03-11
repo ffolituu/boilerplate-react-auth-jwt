@@ -3,26 +3,31 @@
     {
       "email": "jonh.doe@mail.com",
       "password": "$2a$10$76DsNb6N1k0fsrpdl7SnOeTag0AyEGKU7uSrHwq7CGwCJtpl7c156",
-      "role":"MEMBER",
+      "role": "MEMBER",
       "id": 2
     },
     {
       "email": "dominique.doe@mail.com",
       "password": "$2a$10$osWzJIRq4kqSTvAOxjZOA.lxtyuOQ89Oy68bZ0sFfB5PW2rSbGqjO",
-      "role":"MEMBER",
+      "role": "MEMBER",
       "id": 3
     },
     {
       "email": "joshuaT@mail.com",
       "password": "$2a$10$oqD/TiNTk..08wp/JHcm2ualy9xjYIE1/IT2w45ZUSSS4G7xWk4S.",
-      "role":"MEMBER",
+      "role": "MEMBER",
       "id": 5
     },
     {
       "email": "nakyqo@mailinator.com",
       "password": "$2a$10$zpCCt0aotiXpHmWJGWndPufVbjgLY/EPkbulEn2JY2NAAsvVThg8C",
-      "role":"MEMBER",
+      "role": "MEMBER",
       "id": 7
+    },
+    {
+      "email": "mail@mail.pf",
+      "password": "$2a$10$SVKP5s7B167jwTi7iEqkj.O/oiaJ6RtT.0bOF1vmwdQrvKkDHv/fC",
+      "id": 8
     }
   ],
   "todos": [

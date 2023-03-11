@@ -2,8 +2,8 @@ import React from "react";
 import { Form, Button, Alert, Row, Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import AuthService from "../../services/Auth/AuthService";
-import { getError } from "./../../utils/errors/AxiosError";
+import AuthService from "@/services/Auth/AuthService";
+import { getError } from "@/utils/errors/AxiosError";
 
 export const RegisterComponent: React.FC<any> = () => {
   /* Hooks

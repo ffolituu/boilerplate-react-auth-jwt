@@ -1,9 +1,9 @@
 import React from "react";
 import { Form, Button, Row, Col, Alert } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import AuthService from "../../services/Auth/AuthService";
 import { Link, Navigate } from "react-router-dom";
-import { getError } from "../../utils/errors/AxiosError";
+import { getError } from "@/utils/errors/AxiosError";
+import AuthService from "@/services/Auth/AuthService";
 
 export const LoginComponent: React.FC<any> = () => {
   /* Hooks

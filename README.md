@@ -13,6 +13,7 @@ Notre boilerplate d'authentification JWT est une application pré-construite qui
 - react-dom : 18.2.0
 - react-hook-form : 7.43.1
 - react-router-dom : 6.8.1
+- sweetalert2: 11.7.3
 
 ## Developpement de dependences pour le backend
 >

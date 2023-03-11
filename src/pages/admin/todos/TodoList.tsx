@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row, Card } from "react-bootstrap";
-import TodoService from "../../../services/Todo/TodoService";
+import TodoService from "@/services/Todo/TodoService";
 
 export const TodoListPage: React.FC<any> = () => {
   /* Hooks

@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import UserService from "../../../services/User/UserService";
+import UserService from "@/services/User/UserService";
 
 export const UserListPage: React.FC<any> = () => {
   /* Hooks
