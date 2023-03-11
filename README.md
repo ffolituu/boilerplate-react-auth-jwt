@@ -50,5 +50,7 @@ yarn dev
 ## Todo
 
 - [ ] RefreshToken
-- [ ] Remplacer la fonction native `localStorage` par les fonctions du package `zustand`
+- [ ] Stockage des tokens dans les cookies httpOnly
 - [ ] Etablir des middlewares frontaux par rôles utilisateurs
+- [ ] 404 
+- [ ] [Importation absolue des composants](https://plainenglish.io/blog/how-to-set-up-path-resolving-in-vite-ad284e0d9eae) 
