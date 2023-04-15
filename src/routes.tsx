@@ -13,31 +13,17 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<AdminLayout />}>
-          <Route
-            index
-            element={
-              <RequireAuth>
-                <HomePage />
-              </RequireAuth>
-            }
-          />
-          <Route
-            path="/utilisateurs"
-            element={
-              <RequireAuth>
-                <UserListPage />
-              </RequireAuth>
-            }
-          />
-          <Route
-            path="/taches"
-            element={
-              <RequireAuth>
-                <TodoListPage />
-              </RequireAuth>
-            }
-          />
+        <Route
+          path="/"
+          element={
+            <RequireAuth>
+              <AdminLayout />
+            </RequireAuth>
+          }
+        >
+          <Route index element={<HomePage />} />
+          <Route path="/utilisateurs" element={<UserListPage />} />
+          <Route path="/taches" element={<TodoListPage />} />
         </Route>
         <Route path="/" element={<PublicLayout />}>
           <Route path="/connexion" element={<LoginPage />} />

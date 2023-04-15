@@ -2,7 +2,7 @@ import { Navigate, Outlet } from "react-router-dom";
 
 export const PublicLayout = () => {
   // MiddleWare
-  const token: any = localStorage.getItem("user");
+  const token: any = localStorage.getItem(import.meta.env.VITE_APP_STORAGE_KEY);
 
   return (
     <>

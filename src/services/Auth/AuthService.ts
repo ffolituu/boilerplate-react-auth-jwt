@@ -11,14 +11,17 @@ class AuthService {
       })
       .then((response) => {
         if (response.data.accessToken) {
-          localStorage.setItem("user", JSON.stringify(response.data));
+          localStorage.setItem(
+            import.meta.env.VITE_APP_STORAGE_KEY,
+            JSON.stringify(response.data)
+          );
         }
         return response.data;
       });
   }
 
   logout() {
-    localStorage.removeItem("user");
+    localStorage.removeItem(import.meta.env.VITE_APP_STORAGE_KEY);
   }
 
   register(email: string, password: string) {
@@ -29,7 +32,9 @@ class AuthService {
   }
 
   getCurrentUser() {
-    return JSON.parse(localStorage.getItem("user") || "{}");
+    return JSON.parse(
+      localStorage.getItem(import.meta.env.VITE_APP_STORAGE_KEY) || "{}"
+    );
   }
 }
 
