@@ -3,24 +3,30 @@ import { Form, Button, Alert, Row, Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import AuthService from "@/services/Auth/AuthService";
-import { getError } from "@/utils/errors/AxiosError";
+import { getError } from "@/utils/errors/json-server-auth";
+import { AxiosError } from "axios";
 
-export const RegisterComponent: React.FC<any> = () => {
+type FormData = {
+  email: string;
+  password: string;
+};
+
+export const RegisterComponent = () => {
   /* Hooks
    *************************************************************/
   const [isSuccess, setIsSuccess] = React.useState<boolean>(false);
   const [isError, setIsError] = React.useState<boolean>(false);
-  const [msgFlash, setMsgFlash] = React.useState<any>("");
-  const { register, handleSubmit } = useForm();
+  const [msgFlash, setMsgFlash] = React.useState<string | any>();
+  const { register, handleSubmit } = useForm<FormData>();
 
   /* Functions / Events
    *************************************************************/
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FormData) => {
     AuthService.register(data.email, data.password)
       .then(() => {
         setIsSuccess(true);
       })
-      .catch((error: any) => {
+      .catch((error: AxiosError) => {
         setIsError(true);
         setMsgFlash(getError(error));
       });

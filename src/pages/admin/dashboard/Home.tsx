@@ -1,7 +1,6 @@
-import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
-export const HomePage: React.FC<any> = () => {
+export const HomePage = () => {
   /* Render
    *******************************************************************************************/
   return (

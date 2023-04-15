@@ -1,11 +1,13 @@
 import React from "react";
 import { Col, Container, Row, Card } from "react-bootstrap";
 import TodoService from "@/services/Todo/TodoService";
+import { TodoType } from "@/types/TodoType";
+import { AxiosError, AxiosResponse } from "axios";
 
-export const TodoListPage: React.FC<any> = () => {
+export const TodoListPage = () => {
   /* Hooks
    *******************************************************************************************/
-  const [todos, setTodos] = React.useState<any[]>([]);
+  const [todos, setTodos] = React.useState<TodoType[]>([]);
 
   /* useEffect
    *******************************************************************************************/
@@ -17,25 +19,24 @@ export const TodoListPage: React.FC<any> = () => {
    *******************************************************************************************/
   const getTodos = () => {
     TodoService.getAllTodo()
-      .then((response: any) => {
+      .then((response: AxiosResponse) => {
         setTodos(response.data);
       })
-      .catch((error: any) => {
-        console.log(error);
+      .catch((error: AxiosError) => {
+        console.log(error.message);
       });
   };
 
   /* Render
    *******************************************************************************************/
-
   return (
     <Container className="py-4">
       <Row>
         <Col className="col-6 offset-3">
           <h3>Tâches</h3>
-          {todos?.map((d: any) => (
+          {todos?.map((todo: TodoType) => (
             <Card key={Math.random()} className="my-3">
-              <Card.Body>{d.name}</Card.Body>
+              <Card.Body>{todo.name}</Card.Body>
             </Card>
           ))}
         </Col>

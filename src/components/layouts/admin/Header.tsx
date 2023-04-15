@@ -2,7 +2,7 @@ import AuthService from "@/services/Auth/AuthService";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
 
-export const HeaderComponent: React.FC<any> = () => {
+export const HeaderComponent = () => {
   /* Hooks
    *******************************************************************************************/
   let navigate = useNavigate();

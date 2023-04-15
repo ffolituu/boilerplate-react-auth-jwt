@@ -1,4 +1,6 @@
-export const getError = (error: any) => {
+import { AxiosError } from "axios";
+
+export const getError = (error: AxiosError) => {
   // Error Network
   if (error.code === "ERR_NETWORK") {
     return "Aucune liason avec votre backend";
@@ -7,7 +9,7 @@ export const getError = (error: any) => {
   // User doesn't exist
   if (
     error.code === "ERR_BAD_REQUEST" &&
-    error.response.data === "Cannot find user"
+    error.response?.data === "Cannot find user"
   ) {
     return `Vous n'êtes pas encore inscrit à l'application`;
   }
@@ -15,7 +17,7 @@ export const getError = (error: any) => {
   // Incorrect user informations
   if (
     error.code === "ERR_BAD_REQUEST" &&
-    error.response.data === "Incorrect password"
+    error.response?.data === "Incorrect password"
   ) {
     return `Email ou mot de passe incorrect`;
   }
@@ -23,7 +25,7 @@ export const getError = (error: any) => {
   // Format Email invalid
   if (
     error.code === "ERR_BAD_REQUEST" &&
-    error.response.data === "Email format is invalid"
+    error.response?.data === "Email format is invalid"
   ) {
     return `Le champs adresse email n'est pas valide`;
   }
@@ -31,7 +33,7 @@ export const getError = (error: any) => {
   // User already exist
   if (
     error.code === "ERR_BAD_REQUEST" &&
-    error.response.data === "Email already exists"
+    error.response?.data === "Email already exists"
   ) {
     return `Cette adresse email existe déjà`;
   }

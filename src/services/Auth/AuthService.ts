@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
 const API_URL = import.meta.env.VITE_APP_END_POINT;
 
@@ -9,7 +9,7 @@ class AuthService {
         email,
         password,
       })
-      .then((response) => {
+      .then((response: AxiosResponse) => {
         if (response.data.accessToken) {
           localStorage.setItem(
             import.meta.env.VITE_APP_STORAGE_KEY,

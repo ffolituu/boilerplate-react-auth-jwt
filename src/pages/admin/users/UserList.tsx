@@ -1,11 +1,13 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import UserService from "@/services/User/UserService";
+import { UserType } from "@/types/UserType";
+import { AxiosError, AxiosResponse } from "axios";
 
-export const UserListPage: React.FC<any> = () => {
+export const UserListPage = () => {
   /* Hooks
    *******************************************************************************************/
-  const [users, setUsers] = React.useState<any[]>([]);
+  const [users, setUsers] = React.useState<UserType[]>([]);
 
   /* useEffect
    *******************************************************************************************/
@@ -17,25 +19,24 @@ export const UserListPage: React.FC<any> = () => {
    *******************************************************************************************/
   const getUsers = () => {
     UserService.getAllUser()
-      .then((response: any) => {
+      .then((response: AxiosResponse) => {
         setUsers(response.data);
       })
-      .catch((error: any) => {
-        console.log(error);
+      .catch((error: AxiosError) => {
+        console.log(error.message);
       });
   };
 
   /* Render
    *******************************************************************************************/
-
   return (
     <Container className="py-4">
       <Row>
         <Col className="col-6 offset-3">
           <h3>Utilisateurs</h3>
-          {users?.map((d: any) => (
+          {users?.map((user: UserType) => (
             <Card key={Math.random()} className="my-3">
-              <Card.Body>{d.email}</Card.Body>
+              <Card.Body>{user?.email}</Card.Body>
             </Card>
           ))}
         </Col>
